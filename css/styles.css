@@ -182,3 +182,44 @@ a {
     align-items: center;
     gap: 20px;
 }
+
+.photo_with_circles {
+    position: relative;
+    padding: 0; /*чем больше значение, тем шире эллипсы*/
+    text-align: center;
+    width: max-content; /*ширина по размеру изображения*/
+}
+
+.img {
+    display: block;
+    z-index: 0; /* позиционирование изображения над эллипсами*/
+    position: relative;
+  }
+
+  .circle-pink {
+    border: 1px solid #FF00AA;
+    border-radius: 50%;
+    bottom: 0;
+    height: 580px;
+    position: relative;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 573px;
+    z-index: 10; /* позиционирование эллипса под изображением*/
+  }
+
+  .circle-white {
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    bottom: -100px;
+    height: 675px;
+    position: relative;
+    left: -250px;
+    margin: 0 auto;
+    position: absolute;
+    right: 50px;
+    width: 675px;
+    z-index: 100; /* позиционирование эллипса под изображением*/
+  }
