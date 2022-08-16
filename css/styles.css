@@ -117,6 +117,25 @@ a {
     margin-bottom: 114px;
 }
 
+.skills__1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.skills__ellipses {
+    margin-top: 84px;
+    height: 272px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+   
+    z-index: -1;
+}
+
 .skills__content {
     margin-top: 84px;
     display: flex;
@@ -124,8 +143,11 @@ a {
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
+    
+    z-index: 0;
 
 }
+
 
 .works {
     background: #020202;
@@ -185,18 +207,21 @@ a {
 
 .photo_with_circles {
     position: relative;
-    padding: 0; /*чем больше значение, тем шире эллипсы*/
+    padding: 0;
+    /*чем больше значение, тем шире эллипсы*/
     text-align: center;
-    width: max-content; /*ширина по размеру изображения*/
+    width: max-content;
+    /*ширина по размеру изображения*/
 }
 
 .img {
     display: block;
-    z-index: 0; /* позиционирование изображения над эллипсами*/
+    z-index: 0;
+    /* позиционирование изображения над эллипсами*/
     position: relative;
-  }
+}
 
-  .circle-pink {
+.circle-pink {
     border: 1px solid #FF00AA;
     border-radius: 50%;
     bottom: 0;
@@ -207,10 +232,11 @@ a {
     position: absolute;
     right: 0;
     width: 573px;
-    z-index: 10; /* позиционирование эллипса под изображением*/
-  }
+    z-index: 10;
+    /* позиционирование эллипса под изображением*/
+}
 
-  .circle-white {
+.circle-white {
     border: 1px solid #FFFFFF;
     border-radius: 50%;
     bottom: -100px;
@@ -221,5 +247,33 @@ a {
     position: absolute;
     right: 50px;
     width: 675px;
-    z-index: 100; /* позиционирование эллипса под изображением*/
-  }
+    z-index: 100;
+    /* позиционирование эллипса под изображением*/
+}
+
+img { 
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+
+    /*стили для планшета*/
+
+    .center {
+        padding-left: calc(50% - 360px);
+        padding-right: calc(50% - 360px);
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .about__content {
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .skills__ellipses {
+        align-items: center;
+    }
+}
